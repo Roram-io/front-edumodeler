@@ -1,26 +1,30 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { DiagramComponent } from './diagram/diagram.component';
+import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import { LandingComponent } from './landing/landing.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { DocumentacionComponent } from './documentacion/documentacion.component';
 import { ModelerComponent } from './modeler/modeler.component';
-import { LandingComponent } from './landing/landing.component';
+import { MissinglinkComponent } from './missinglink/missinglink.component'
 
 @NgModule({
   declarations: [
     AppComponent,
+    DiagramComponent,
+    LandingComponent,
     NoticiasComponent,
     DocumentacionComponent,
     ModelerComponent,
-    LandingComponent
+    MissinglinkComponent
   ],
   imports: [
-    BrowserModule,    
+    BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
